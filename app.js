@@ -4,7 +4,7 @@ const errorMiddleware = require('./middleware/error-handler')
 const connectDB = require('./db/connect')
 const productsRouter = require('./controllers/products')
 
-//async errors
+require('express-async-errors')
 
 const express = require('express')
 const app =  express()
