@@ -20,8 +20,9 @@ app.get('/',(req,res)=>{
 })
 
 //products route
-app.use('/api/v1/products', productsRouter)
-
+// app.get('/api/v1/products', productsRouter)
+app.use('/api/v1/products/static', productsRouter.getAllProductsStatic)
+app.use('/api/v1/products', productsRouter.getAllProducts)
 
 app.use(notFoundMiddleware)
 app.use(errorMiddleware)
